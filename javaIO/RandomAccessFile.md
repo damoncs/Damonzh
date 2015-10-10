@@ -4,6 +4,7 @@
 
 ###具体内容
 RandomAccessFile类主要是完成随机读取功能，可以读取指定位置的内容
+
 举例：一个文件中保存了一下三个数据：
 >zhangsan,30
 >lisi,31
@@ -60,5 +61,7 @@ RandomAccessFile主要方法:
 ###总结
  
 1、RandomAccessFile类的作用
-2、RandomAccessFile类的操作比较麻烦，了解即可，
+
+2、RandomAccessFile类的操作比较麻烦，了解即可
+
 IO中提供专门的输入输出操作
