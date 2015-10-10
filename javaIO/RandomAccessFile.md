@@ -1,6 +1,6 @@
 ###学习目标
--掌握RandomAccessFile类的作用
--可以使用RandomAccessFile读取指定位置的数据
+- 掌握RandomAccessFile类的作用
+- 可以使用RandomAccessFile读取指定位置的数据
 ###具体内容
 RandomAccessFile类主要是完成随机读取功能，可以读取指定位置的内容
 举例：一个文件中保存了一下三个数据：
@@ -14,15 +14,18 @@ RandomAccessFile主要方法:
 
 ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
 
+
 构造：
     public RandomAccessFile(File file,String mode)
 	    throws FileNotFoundException
 ~~~~
+
 实例化此类时需要传递File类，告诉程序要操作的文件，另一个参数为文件的打开模式。
 打开模式包括：
--r:读模式
--w:只写
--rw：读写，如果使用此模式，文件不存在则会自动创建。
+- r:读模式
+- w:只写
+- rw：读写，如果使用此模式，文件不存在则会自动创建。
+
     import java.io.File ;
 	import java.io.RandomAccessFile ;
 	public class RandomAccessFileDemo01{
@@ -49,6 +52,7 @@ RandomAccessFile主要方法:
 	}
 ~~~~
 ###总结
+ 
 1、RandomAccessFile类的作用
 2、RandomAccessFile类的操作比较麻烦，了解即可，
 IO中提供专门的输入输出操作
