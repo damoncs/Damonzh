@@ -1,4 +1,13 @@
-Git is a distributed version control system.
-Git is free software.
-想把学习的总结放到这里，以便后期回顾
-从git的学习开始吧 ^_^
+#总结
+
+**目录**
+
+[TOCM]
+
+[TOC]
+
+#Git学习
+##
+#JavaIO
+##RandomAccessFile类
+#Git学习 link[Heading link](https://github.com/damoncs/Damonzh/blob/master/Git/git01.md"Heading link")
