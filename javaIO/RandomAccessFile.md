@@ -18,7 +18,7 @@ RandomAccessFile类主要是完成随机读取功能，可以读取指定位置的内容
 
 RandomAccessFile主要方法:
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](https://github.com/damoncs/Damonzh/blob/master/images/RandomAccessFile.PNG)
 
 
 构造：
