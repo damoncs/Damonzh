@@ -1,16 +1,16 @@
-工作区和暂存区
+#工作区和暂存区
 
 Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的概念。
 
 先来看名词解释。
 
-工作区（Working Directory）
+#工作区（Working Directory）
 
 就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区：
 
 working-dir
 
-版本库（Repository）
+#版本库（Repository）
 
 工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
 
@@ -40,30 +40,30 @@ Git has a mutable index called stage.
 先用git status查看一下状态：
 
 $ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#       modified:   readme.txt
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#       LICENSE
+~ On branch master
+~ Changes not staged for commit:
+~   (use "git add <file>..." to update what will be committed)
+~   (use "git checkout -- <file>..." to discard changes in working directory)
+~
+~       modified:   readme.txt
+~
+~ Untracked files:
+~   (use "git add <file>..." to include in what will be committed)
+~
+~       LICENSE
 no changes added to commit (use "git add" and/or "git commit -a")
 Git非常清楚地告诉我们，readme.txt被修改了，而LICENSE还从来没有被添加过，所以它的状态是Untracked。
 
 现在，使用两次命令git add，把readme.txt和LICENSE都添加后，用git status再查看一下：
 
 $ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       new file:   LICENSE
-#       modified:   readme.txt
-#
+~ On branch master
+~ Changes to be committed:
+~   (use "git reset HEAD <file>..." to unstage)
+~
+~       new file:   LICENSE
+~       modified:   readme.txt
+~
 现在，暂存区的状态就变成这样了：
 
 git-stage
@@ -77,7 +77,7 @@ $ git commit -m "understand how stage works"
 一旦提交后，如果你又没有对工作区做任何修改，那么工作区就是“干净”的：
 
 $ git status
-# On branch master
+~ On branch master
 nothing to commit (working directory clean)
 现在版本库变成了这样，暂存区就没有任何内容了：
 
