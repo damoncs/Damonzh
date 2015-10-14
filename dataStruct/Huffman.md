@@ -52,7 +52,7 @@ Huffman树又称最优树，可以用来构造最优编码。
 
 4、重复2.3操作，直至F中只有一棵树。
 
-![](https://github.com/damoncs/Damonzh/blob/master/images/Huffman.PNG)
+![](https://github.com/damoncs/Damonzh/blob/master/images/Huffman.png)
 
 ####构造Huffman树的具体实现
 ````java

@@ -33,4 +33,3 @@ public class StackArray implements Stack{
 		return elements[size] ;
 	}
 }
-,,,,
