@@ -7,7 +7,9 @@
 * **JavaIO**
  - [2.0 RandomAccessFile类](/javaIO/RandomAccessFile.md)
  - [2.1 字节流与字符流](/javaIO/Stream.md)
- - [2.2 字节流与字符流的转换](/javaIO/StreamSwitch.md))
+ - [2.2 字节流与字符流的转换](/javaIO/StreamSwitch.md)
 * **JVM**
  - [3.0 对象的创建](/Jvm/newObject.md)
  - [3.1 类加载](/Jvm/classLoader.md)
+### 第二部分 算法
+### 第三部分 数据结构{查补缺漏}
