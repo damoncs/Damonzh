@@ -42,4 +42,4 @@ FileReader也不是Reader的子类，而是转换流的子类
 
 2、一定要清楚操作的终端实际上都是字节的形式
 
-3、FileWriter和FileReader两个子类的定义，中间使用了转换类
+3、FileWriter和FileReader两个子类的定义，中间使用了转换类。
