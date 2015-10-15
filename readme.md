@@ -15,6 +15,8 @@
  
 #### 第二部分 算法
 #### 第三部分 数据结构{查补缺漏}
+* **时间复杂度**
+ - [1.0 排序](/dataStruct/Complexity.md)
 * **栈与队列**
- - [1.0 栈实现](/dataStruct/Stack.md)
- - [1.1 Huffman编码](/dataStruct/Huffman.md)
+ - [2.0 栈实现](/dataStruct/Stack.md)
+ - [2.1 Huffman编码](/dataStruct/Huffman.md)
