@@ -81,7 +81,7 @@ public class HuffmanTreeNode extends BinTreeNode{
 	//get&set方法
 	···
 }
-~~~~
+```
 #####构造算法：
 ````java
 private static HuffmanTreeNode buildHuffmanTree(HuffmanTreeNode[] nodes){
