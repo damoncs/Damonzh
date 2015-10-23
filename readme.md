@@ -16,11 +16,15 @@
  
 #### 第二部分 算法
 * **LeetCode**
- - [Two Sum](/leetcode/TwoSum.md)
+ - [4.1 Two Sum](/leetcode/TwoSum.md)
  
 #### 第三部分 数据结构{查补缺漏}
 * **时间复杂度**
- - [1.0 排序](/dataStruct/Complexity.md)
+ - [5.0 排序](/dataStruct/Complexity.md)
 * **栈与队列**
- - [2.0 栈实现](/dataStruct/Stack.md)
- - [2.1 Huffman编码](/dataStruct/Huffman.md)
+ - [6.0 栈实现](/dataStruct/Stack.md)
+ - [6.1 Huffman编码](/dataStruct/Huffman.md)
+
+#### 第四部分 数据库
+* **MySQL**
+ - [7.0 存储引擎](/mysql/mysql.md)
