@@ -11,12 +11,19 @@ jQuery语法是为HTML元素的选取编制的，可以对元素执行某些操作
 
 ####实例
 $(this).hide()
+
 >演示jQuery.hide()函数，隐藏当前的HTML元素
+
 $("#test").hide()
+
 >演示jQuery。hide()函数，隐藏id="test"的元素
+
 $("p").hide()
+
 >隐藏所有<p>的元素。
+
 $(".test").hide()
+
 >隐藏所有calss="test"的元素。
 
 ####文档就绪函数
