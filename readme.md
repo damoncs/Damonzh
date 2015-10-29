@@ -32,3 +32,4 @@
 #### 第五部分 前端
 * **jQuery**
  - [8.0 jQuery语法](/jQuery/jQueryGrammar.md)
+ - [8.1 jQuery事件](/jQuery/jQueryEvent.md)
