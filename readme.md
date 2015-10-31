@@ -28,7 +28,7 @@
 #### 第四部分 数据库
 * **MySQL**
  - [7.0 存储引擎](/mysql/mysql.md)
- - [7.1 mysql数据类型](/mysql/mysqlDateType.md)
+ - [7.1 mysql数据类型](/mysql/mysqlDataType.md)
  
 #### 第五部分 前端
 * **jQuery**
