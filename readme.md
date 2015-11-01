@@ -29,6 +29,7 @@
 * **MySQL**
  - [7.0 存储引擎](/mysql/mysql.md)
  - [7.1 mysql数据类型](/mysql/mysqlDataType.md)
+ - [7.2 mysql查询处理](/mysql/SQLSearch.md)
  
 #### 第五部分 前端
 * **jQuery**
