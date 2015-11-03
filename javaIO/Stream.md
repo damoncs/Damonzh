@@ -6,22 +6,22 @@
 
 ###具体内容
 ####流
-程序中，所有的数据都是以流的方式进行传输的
+- 程序中，所有的数据都是以流的方式进行传输的
 
-程序需要数据时，使用输入流读取数据，当程序要将数据保存，就使用输出流完成
+- 程序需要数据时，使用输入流读取数据，当程序要将数据保存，就使用输出流完成
 
-程序的输入输出都是以流的形式保存的，流中保存的实际上全都是字节码文件。
+- 程序的输入输出都是以流的形式保存的，流中保存的实际上全都是字节码文件。
 
 ####字节流与字符流
 主要的四个类
 
-OutputStream、InputStream
+>字节流：OutputStream、InputStream
 
-Writer、Reader
+>字符流：Writer、Reader
 
 注：上述四个类全都是抽象类，在使用时使用其对应的子类
 
-####操作流程
+####文件操作流程
 在Java中IO操作也是有相应步骤的，以文件操作为例：
 
  - A、使用File打开一个文件
@@ -31,14 +31,14 @@ Writer、Reader
 
 IO属于资源操作，对于资源操作，最后必须进行关闭，否则就有可能出现未知错误
 
-####字节流
+####一、字节流
 主要是操作byte类型数据，以byte数组为准，操作类是：OutputStream、InputStream
 
 Byte是字节，所以使用字节流操作，所有的数据基本都可以使用字节数组表示
 
 1、字节输出流：OutputStream
 io中字节输出流的最大父类，此类的定义如下：
-~~~~
+````java
     public abstract class OutputStream extends Object implements
 		Closeable,Flushable
 ~~~~
@@ -54,7 +54,7 @@ OutputStream类的常用操作方法：
 之前的操作，在重新写入文件之后，都会覆盖文件中的已有内容，那么此时可以通过FileOutpurStream向文件中追加内容
 
 使用以下构造方法：
-~~~~
+````java
 	public FileOutputStream(File file,boolean append)throws FileNotFoundException
 ~~~~
 
@@ -68,7 +68,7 @@ InputStream类的常用操作方法：
 ![](https://github.com/damoncs/Damonzh/blob/master/images/InputStream.PNG)
 
 使用输入流时，在不知文件大小时，可以使用如下：
-~~~~
+````java
 	int len = 0 ;
 	int temp = 0 ;
 	while((temp = input.read())!=-1){
@@ -78,7 +78,7 @@ InputStream类的常用操作方法：
 	}
 ~~~~
 
-####字符流
+####二、字符流
 和字节流主要的区别就是操作对象变为字符char
 
 Writer类的常用操作方法：
@@ -100,7 +100,7 @@ Reader类的常用操作方法：
 说明保存在了缓冲区之中，而如果执行关闭的时候会强制性的刷新缓冲区，所以把内容输出。
 
 现在假设没有关闭，则可以强制刷新：
-~~~~
+````java
 	public abstract void flush()
 			throws IOException
 ~~~~
@@ -127,7 +127,7 @@ Reader类的常用操作方法：
 
 代码如下：
 
-~~~~
+````java
 	import java.io.* ;
 public class Copy{
 	public static void main(String args[]){

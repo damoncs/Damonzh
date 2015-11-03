@@ -13,7 +13,8 @@
 其中定义了很多print、println方法，和System.out.println()一样，可以打印任何的数据类型
 
 构造方法：
-<p>>public PrintStream(OutputStream out)-->指定输出位置
+
+>public PrintStream(OutputStream out)-->指定输出位置
 
 此构造方法接受OutputStream的子类。
 
