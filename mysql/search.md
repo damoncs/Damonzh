@@ -35,4 +35,28 @@ SQLÓïÑÔ²»Í¬ÓëÆä±à³ÌÓïÑÔµÄÊÇ£ºÔÚ´¦Àí´úÂëµÄË³ÐòÉÏ¡£´ó¶à±à³ÌÓïÑÔ´úÂë°´±àÂëË³Ðò±»´¦À
 
 >11>LIMIT£ºÈ¡³öÖ¸¶¨ÐÐµÄ¼ÇÂ¼£¬²úÉúÐéÄâ±íVT11²¢·µ»Ø¸øÓÃ»§¡£
 
-1.Ö´ÐÐµÑ¿¨¶û»ý
+######1.Ö´ÐÐµÑ¿¨¶û»ý
+
+######2.Ó¦ÓÃON¹ýÂËÆ÷
+
+SELECT²éÑ¯Ò»¹²ÓÐ3¸ö¹ýÂË¹ý³Ì£¬·Ö±ðÊÇON¡¢WHERE¡¢HAVING¡£
+
+¾­¹ýµÑ¿¨¶û»ý²úÉúµÄVT1ÐéÄâ±í£¬ÔÚ²úÉúVT2Ê±£¬»áÔö¼ÓÒ»¸ö¶îÍâµÄÁÐÀ´±íÊ¾ON¹ýÂËÆ÷µÄ·µ»ØÖµ¡£
+
+·µ»ØÖµÓÐTRUE¡¢FALSE¡¢UNKNOWN¡£´ËÊ±£¬È¡³ö±È½ÏÖµÎªTRUEµÄ¼ÇÂ¼£¬²úÉúÐéÄâ±íVT2¡£
+
+######3.Ìí¼ÓÍâ²¿ÐÐ
+
+ÕâÒ»²½ÔÚÁ¬½ÓÀàÐÍÎªOUTER JOINÊ±·¢Éú¡£ÈçLEFT OUTER JOIN¡££¨´ó¶àÊ¡ÂÔOUTER¹Ø¼ü×Ö£©
+
+LEFT OUTER JOIN°Ñ×ó±í¼ÇÎª±£Áô±í£¬Ìí¼ÓÍâ²¿ÐÐµÄ²Ù×÷¾ÍÊÇÔÚVT2µÄ»ù´¡ÉÏÌí¼Ó±£Áô±íÖÐ±»¹ýÂËµÄÊý¾Ý¡£
+
+#####7.Ó¦ÓÃHAVING¹ýÂËÆ÷
+HAVINGÊÇ¶Ô·Ö×éÌõ¼þ½øÐÐ¹ýÂËµÄÉ¸Ñ¡Æ÷¡£ÕâÊÇ×îºóµ÷ÓÃµÄ¹ýÂËÆ÷¡£
+
+#####11.LIMIT×Ó¾ä
+LIMIT n,m  ±íÊ¾´ÓµÚnÌõ¼ÇÂ¼¿ªÊ¼Ñ¡ÔñmÌõ¼ÇÂ¼¡£
+
+Ê¹ÓÃ´Ë×Ö¾ä¿ÉÒÔ½â¾öWebÖÐµÄ·ÖÒ³ÎÊÌâ¡£µ«¶ÔÓÚ´ó¹æÄ£µÄÊý¾Ý£¨ÀýÈçÂÛÌ³£©LIMIT n,mµÄÐ§ÂÊ·Ç³£µÍ¡£
+
+Òò´Ë£¬Êý¾ÝÁ¿ÅÓ´óµÄ·ÖÒ³ÎÊÌâ£¬ÔÚÓ¦ÓÃ²ã½¨Á¢Ò»¶¨µÄ»º´æ»úÖÆºÜÓÐ±ØÒª¡£
