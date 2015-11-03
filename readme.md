@@ -11,6 +11,7 @@
  - [2.1 字节流与字符流](/javaIO/Stream.md)
  - [2.2 字节流与字符流的转换](/javaIO/StreamSwitch.md)
  - [2.3 打印流](/javaIO/PrintWriter.md)
+ - [2.4 BufferedReader类](javaIO/BufferedReader.md)
 * **JVM**
  - [3.0 对象的创建](/Jvm/newObject.md)
  - [3.1 类加载](/Jvm/classLoader.md)

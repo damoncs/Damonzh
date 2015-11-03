@@ -128,7 +128,7 @@ Reader类的常用操作方法：
 代码如下：
 
 ````java
-	import java.io.* ;
+import java.io.* ;
 public class Copy{
 	public static void main(String args[]){
 		if(args.length!=2){		// 判断是否是两个参数
