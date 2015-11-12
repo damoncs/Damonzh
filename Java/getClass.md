@@ -60,3 +60,105 @@ public class GetClassDemo02{
 3、所谓反射就是通过对象得到所在类的信息，通过Class类实现。
 
 ####二、Class类的作用
+- 使用Class类完成对象的实例化操作
+- 可以通过Constructor；类调用有参构造方法完成对象的实例化操作
+
+Class主要是反射的源头，不光可以取得对象所在的类的信息，也可以直接通过Class类的方法进行对象的实例化操作
+
+正常情况下，使用关键字new为对象实例化，
+
+####三、反射机制的深入研究
+- 使用反射调用类中的指定方法
+- 使用反射完成setter及getter方法的调用
+- 使用反射直接操作类的属性
+- 使用反射操作数组
+
+1、反射调用类中的方法
+
+<1>、通过Class类得到方法，返回一个Method类型对象。
+
+````java
+public Method getMethod(String name,
+						Class<?>...parameterType)
+		throws NoSushMethodException,
+				SecurityException
+~~~~
+
+<2>、调用无参的方法
+````java
+public Object invoke(Object obj,
+					Object... args)
+			throws IllegalAccessException,
+				...
+~~~~
+
+执行时还需要传递参数景区，而且需要实例化对象。
+
+````java
+Class<?> c1 = null ;
+c1 = Class.forName("org.damonzh.demo.Person") ;	//实例化Class对象
+Method met = c1.getMethod("sayChina");	//找到sayChina方法
+met.invoke(c1.newInstance());	//调用方法
+~~~~
+上述省略了异常处理
+
+![](https://github.com/damoncs/Damonzh/blob/master/images/GetMethod.png)
+
+- 第二种情况：调用有参的方法
+
+此时必须设置参数类型及其内容
+
+````java
+Method met = c1.getMethod("sayHello",String.class,int.classs);	//找到sayHello方法
+String rv = null ;
+rv = (String)met.invoke(c1.new Instance(),"zhangqq",21);
+~~~~
+
+2、反射调用类setter及getter方法
+````java
+import java.lang.reflect.Method ;
+public class InvokeSetGetDemo{
+	public static void main(String args[]){
+		Class<?> c1 = null ;
+		Object obj = null ;
+		try{
+			c1 = Class.forName("org.lxh.demo15.Person") ;	// 实例化Class对象
+		}catch(Exception e){}
+		try{
+			obj = c1.newInstance() ;
+		}catch(Exception e){}
+		setter(obj,"name","李兴华",String.class) ;	// 调用setter方法
+		setter(obj,"age",30,int.class) ;	// 调用setter方法
+		System.out.print("姓名：") ;
+		getter(obj,"name") ;
+		System.out.print("年龄：") ;
+		getter(obj,"age");
+	}
+	/**
+		Object obj：要操作的对象
+		String att：要操作的属性
+		Object value：要设置的属性内容
+		Class<?> type：要设置的属性类型
+	*/
+	public static void setter(Object obj,String att,Object value,Class<?> type){
+		try{
+			Method met = obj.getClass().getMethod("set"+initStr(att),type) ;	// 得到setter方法
+			met.invoke(obj,value) ;	// 设置setter的内容
+		}catch(Exception e){
+			e.printStackTrace() ;
+		}
+	}
+	public static void getter(Object obj,String att){
+		try{
+			Method met = obj.getClass().getMethod("get"+initStr(att)) ;	// 得到setter方法
+			System.out.println(met.invoke(obj)) ;	// 调用getter取得内容
+		}catch(Exception e){
+			e.printStackTrace() ;
+		}
+	}
+	public static String initStr(String old){	// 将单词的首字母大写
+		String str = old.substring(0,1).toUpperCase() + old.substring(1) ;
+		return str ;
+	}
+};
+~~~~
