@@ -6,7 +6,7 @@
 
 Java反射（BeanFactory对Bean的管理大量是用反射）
 
-Java代理（是SpringAOP思想的原理）
+[Java代理](/Java/Proxy.md)（是SpringAOP思想的原理）
 
 Xml解析（Spring Bean管理文件XML）
 
@@ -16,3 +16,5 @@ Xml解析（Spring Bean管理文件XML）
 通过代理，控制对对象的访问！
 
 可以详细控制访问某个对象的方法，在调用这个方法前做前置处理，调用方法后做后置处理。
+
+####AOP
