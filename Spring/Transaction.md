@@ -14,7 +14,7 @@
 
 保证事务访问的任何数据不会受其他事务所做的任何改变的影响，直到该事务完成。（类似线程的同步性）
 
--4、持久性
+- 4、持久性
 
 保证假如事务执行成功，则它在系统中产生的结果是持久的。
 
@@ -49,5 +49,67 @@ End Transaction(提交事务处理)
 
 2、传统的JDBC事务处理
 
+JDBC数据库接口，提供了基于数据库连接进行事务处理的功能。
+
+一般的流程：首先获取数据源；然后根据数据源获取数据库连接，接着设定事务开始。执行相应的操作，最后执行成功提交，执行失败则回滚。
+````java
+public class Helloworld{
+	private DataSource dataSource ;
+	//获取数据源
+	public void satDataSource(DataSource dataSource){
+		this.dataSource = dataSource ;
+	}
+	Connection conn = null ;
+	Statement stmt = null ;
+	try{
+		//获取数据库连接
+		conn = dataSource.getConnection() ;
+		//开始启动事务
+		conn.setAutoCommit(false) ;
+		stmt = conn.createStatement() ;
+		//执行相应操作
+		stmt.executeUpdate("INSERT INTO hello VALUES(1,'gf','helloworld')") ;
+		//执行成功则提交
+		conn.commit() ;
+	}catch(SQLException e){
+		if(conn!=null){
+			try{
+				//执行不成功，回滚
+				conn.rollback() ;
+			}catch(SQLException ex){
+				System.out.println(ex);
+			}
+		}
+	}finally{
+		//假如stmt不为空，则关闭stmt
+		if(stmt!=null){
+			try{
+				stmt.close();
+			}catch(SQLException ex){
+				System.out.println(ex);
+			}
+		}
+		if(conn!=null){
+			try{
+				conn.close();
+			}catch(){}
+		}
+	}
+}
+~~~~
 
 3、分布式事务处理
+
+分布式事务处理针对多个数据库事务的事务处理。
+
+分布式事务就是事务分布在多个资源上，有多个组件共享的事务。
+
+具有如下几个特征：
+- 组件要在同一原子操作中与多个资源通信。针对银行转账，可能账户是农业银行的，要向其他银行进行转账。
+- 多个组件要在同一原子操作中操作。两个不同银行之间转账，要么两个系统都操作成功，要么都操作失败。
+- 分布式事务需要多个不同的事务管理器的合作。
+
+####Spring的事务处理
+- 1、编程式事务处理
+- 2、声明式事务处理
+
