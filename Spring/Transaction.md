@@ -121,3 +121,33 @@ Spring事务的中心接口是org.springframework.transaction.PlatformtransactionManager
 两者区别：编程式事务处理虽比传统的JDBC有了很大的改进，但还是有些麻烦，因为要实现具体的方法。Spring声明式事务处理提供例如更好的解决方法。
 
 在小型软件系统中，只有很少的事务操作，使用编程式事务处理比较好，如果是大型的软件系统，有大量的事务操作，则使用声明式事务处理比较好。而且它是的事务处理与具体的业务逻辑分离。
+
+
+#####编程式事务控制
+1、在***Service中使用TransactionTemplate
+
+2、TransactionTemplate依赖DataSourceTransactionManager
+
+3、DataSourceTransactionManager依赖DataSource构造
+
+
+创建一个事务管理的模板，在需要事务的业务层注入事务管理模板
+
+````xml
+	<!-- 配置业务层类 -->
+	<bean id="accountService" class="com.damonzh.account.service.AccountServiceImpl">
+		<property name="accountDao" ref="accountDao" />
+		<!-- 注入事务管理的模板 -->
+		<property name="transactionTemplate" ref="transactionTemplate" />
+	</bean>
+	
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!--配置事务管理的模板 -->
+	<bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="transactionManager"/>
+	</bean>
+~~~~
