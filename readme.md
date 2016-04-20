@@ -7,3 +7,5 @@ Git is free software.
 从git的学习开始吧 ^_^
 
 [内容目录](https://github.com/damoncs/Damonzh/blob/master/catalog.md)
+
+[程序猿的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/content/software/mac/dotfiles.html)
