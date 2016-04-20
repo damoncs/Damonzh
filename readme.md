@@ -9,3 +9,5 @@ Git is free software.
 [内容目录](https://github.com/damoncs/Damonzh/blob/master/catalog.md)
 
 [程序猿的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/content/software/mac/dotfiles.html)
+
+[如何高效的利用GitHub学习](http://www.yangzhiping.com/tech/github.html)
