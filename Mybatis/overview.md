@@ -4,6 +4,7 @@ MyBatis 是支持普通 SQL 查询，存储过程和高级映射的优秀持久�
 
 ### ORM工具的思想
 无论是用过的 hibernate,Mybatis,你都可以法相他们有一个共同点：
+
 1. 从配置文件(通常是 XML 配置文件中)得到 sessionfactory.
 2. 由 sessionfactory 产生 session
 3. 在 session 中完成对数据的增删改查和事务提交等.
