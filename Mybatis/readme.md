@@ -12,3 +12,4 @@
 
 ### 目录
  - [Mybatis简介](https://github.com/damoncs/Learning-Summary/blob/master/Mybatis/overview.md)
+ - [环境搭建](https://github.com/damoncs/Learning-Summary/blob/master/Mybatis/envir-to-build.md)
