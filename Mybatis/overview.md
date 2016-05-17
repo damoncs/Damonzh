@@ -39,7 +39,8 @@ public class Test {
 	}
 }
 ```
-这里读取xml配置文件时代码如下：有心去可以深入学习下，与类加载相关
+这里读取xml配置文件时代码如下：有兴趣可以深入学习下，与类加载相关
+
 通过xml文件获取到输入流-InputStream
 ```java
 InputStream getResourceAsStream(String resource, ClassLoader classLoader[]) {
@@ -56,7 +57,6 @@ InputStream getResourceAsStream(String resource, ClassLoader classLoader[]) {
 		if (null != returnValue)
 			return returnValue;
 	}
-	
 	return null;
 }
 ```
