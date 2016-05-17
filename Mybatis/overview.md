@@ -60,3 +60,14 @@ InputStream getResourceAsStream(String resource, ClassLoader classLoader[]) {
 	return null;
 }
 ```
+最终转为Java的URL获取到流(ClassLoader中)
+```java
+public InputStream getResourceAsStream(String s) {
+	URL url = getResource(s);
+	try {
+		return url == null ? null : url.openStream();
+	} catch (IOException ioexception) {
+		return null;
+	}
+}
+```
