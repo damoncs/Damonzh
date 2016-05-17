@@ -10,3 +10,64 @@ MyBatis 是支持普通 SQL 查询，存储过程和高级映射的优秀持久�
 3. 在 session 中完成对数据的增删改查和事务提交等.
 4. 在用完之后关闭 session 。
 5. 在 Java 对象和 数据库之间有做 mapping 的配置文件，也通常是 xml 文件。
+
+例如：
+```java
+public class Test {
+	private static SqlSessionFactory sqlSessionFactory;
+	private static Reader reader;
+
+	static {
+		try {
+			reader = Resources.getResourceAsReader("Configuration.xml");
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		SqlSession session = sqlSessionFactory.openSession();
+		try {
+			User user = (User) session.selectOne(
+					"com.quanquan.mybatis.models.UserMapper.selectUserByID", 1);
+			System.out.println(user.getUserAddress());
+			System.out.println(user.getUserName());
+		} finally {
+			session.close();
+		}
+	}
+}
+```
+这里读取xml配置文件时代码如下：有兴趣可以深入学习下，与类加载相关
+
+通过xml文件获取到输入流-InputStream
+```java
+InputStream getResourceAsStream(String resource, ClassLoader classLoader[]) {
+	ClassLoader arr$[] = classLoader;
+	int len$ = arr$.length;
+	for (int i$ = 0; i$ < len$; i$++) {
+		ClassLoader cl = arr$[i$];
+		if (null == cl)
+			continue;
+		InputStream returnValue = cl.getResourceAsStream(resource);
+		if (null == returnValue)
+			returnValue = cl.getResourceAsStream((new StringBuilder())
+					.append("/").append(resource).toString());
+		if (null != returnValue)
+			return returnValue;
+	}
+	return null;
+}
+```
+最终转为Java的URL获取到流(ClassLoader中)
+```java
+public InputStream getResourceAsStream(String s) {
+	URL url = getResource(s);
+	try {
+		return url == null ? null : url.openStream();
+	} catch (IOException ioexception) {
+		return null;
+	}
+}
+```
