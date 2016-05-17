@@ -10,3 +10,32 @@ MyBatis 是支持普通 SQL 查询，存储过程和高级映射的优秀持久�
 3. 在 session 中完成对数据的增删改查和事务提交等.
 4. 在用完之后关闭 session 。
 5. 在 Java 对象和 数据库之间有做 mapping 的配置文件，也通常是 xml 文件。
+
+例如：
+```java
+public class Test {
+	private static SqlSessionFactory sqlSessionFactory;
+	private static Reader reader;
+
+	static {
+		try {
+			reader = Resources.getResourceAsReader("Configuration.xml");
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		SqlSession session = sqlSessionFactory.openSession();
+		try {
+			User user = (User) session.selectOne(
+					"com.quanquan.mybatis.models.UserMapper.selectUserByID", 1);
+			System.out.println(user.getUserAddress());
+			System.out.println(user.getUserName());
+		} finally {
+			session.close();
+		}
+	}
+}
+```
