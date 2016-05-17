@@ -39,3 +39,24 @@ public class Test {
 	}
 }
 ```
+这里读取xml配置文件时代码如下：有心去可以深入学习下，与类加载相关
+通过xml文件获取到输入流-InputStream
+```java
+InputStream getResourceAsStream(String resource, ClassLoader classLoader[]) {
+	ClassLoader arr$[] = classLoader;
+	int len$ = arr$.length;
+	for (int i$ = 0; i$ < len$; i$++) {
+		ClassLoader cl = arr$[i$];
+		if (null == cl)
+			continue;
+		InputStream returnValue = cl.getResourceAsStream(resource);
+		if (null == returnValue)
+			returnValue = cl.getResourceAsStream((new StringBuilder())
+					.append("/").append(resource).toString());
+		if (null != returnValue)
+			return returnValue;
+	}
+	
+	return null;
+}
+```
