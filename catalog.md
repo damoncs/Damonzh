@@ -18,28 +18,28 @@
  - [4.1 Spring AOP](/Spring/Spring.md)
  - [4.2 Spring Transaction](/Spring/Transaction.md)
 
-#### 第二部分 算法
+### 第二部分 算法
 * **LeetCode**
  - [5.1 Two Sum](/leetcode/TwoSum.md)
  
-#### 第三部分 数据结构{查补缺漏}
+### 第三部分 数据结构{查补缺漏}
 * **时间复杂度**
  - [6.0 排序](/dataStruct/Complexity.md)
 * **栈与队列**
  - [7.0 栈实现](/dataStruct/Stack.md)
  - [7.1 Huffman编码](/dataStruct/Huffman.md)
 
-#### 第四部分 数据库
+### 第四部分 数据库
 * **MySQL**
  - [8.0 存储引擎](/mysql/mysql.md)
  - [8.1 mysql数据类型](/mysql/mysqlDataType.md)
  - [8.2 mysql查询处理](/mysql/search.md)
  
-#### 第五部分 前端
+### 第五部分 前端
 * **jQuery**
  - [9.0 jQuery语法](/jQuery/jQueryGrammar.md)
  - [9.1 jQuery事件](/jQuery/jQueryEvent.md)
 
-#### 第六部分 Linux
+### 第六部分 Linux
 * **Linux 基础**
  - [10.0 Linux网络配置](/Linux/networkconfig.md)
