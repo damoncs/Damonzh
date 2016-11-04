@@ -1,47 +1,45 @@
-# ×Ü½á
-
-##Ä¿Â¼
-#### µÚÒ»²¿·Ö Java
-* **GitÑ§Ï°**
- - [1.0 Git½Ì³ÌÁÎÑ©·å](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
- - [1.1 git¹¤×÷Çø£¬²Ö¿â](/Git/git01.md)
- - [1.2 ·ÖÖ§Ô­Àí¼°Ê¹ÓÃ](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840038939c291467cc7c747b1810aab2fb8863508000)
+#ç›®å½•
+#### ç¬¬ä¸€éƒ¨åˆ† Java
+* **Gitå­¦ä¹ **
+ - [1.0 Gitæ•™ç¨‹å»–é›ªå³°](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+ - [1.1 gitå·¥ä½œåŒºï¼Œä»“åº“](/Git/git01.md)
+ - [1.2 åˆ†æ”¯åŸç†åŠä½¿ç”¨](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840038939c291467cc7c747b1810aab2fb8863508000)
 * **JavaIO**
- - [2.0 RandomAccessFileÀà](/javaIO/RandomAccessFile.md)
- - [2.1 ×Ö½ÚÁ÷Óë×Ö·ûÁ÷](/javaIO/Stream.md)
- - [2.2 ×Ö½ÚÁ÷Óë×Ö·ûÁ÷µÄ×ª»»](/javaIO/StreamSwitch.md)
- - [2.3 ´òÓ¡Á÷](/javaIO/PrintWriter.md)
- - [2.4 BufferedReaderÀà](javaIO/BufferedReader.md)
+ - [2.0 RandomAccessFileç±»](/javaIO/RandomAccessFile.md)
+ - [2.1 å­—èŠ‚æµä¸å­—ç¬¦æµ](/javaIO/Stream.md)
+ - [2.2 å­—èŠ‚æµä¸å­—ç¬¦æµçš„è½¬æ¢](/javaIO/StreamSwitch.md)
+ - [2.3 æ‰“å°æµ](/javaIO/PrintWriter.md)
+ - [2.4 BufferedReaderç±»](javaIO/BufferedReader.md)
 * **JVM**
- - [3.0 ¶ÔÏóµÄ´´½¨](/Jvm/newObject.md)
- - [3.1 Àà¼ÓÔØ](/Jvm/classLoader.md)
+ - [3.0 å¯¹è±¡çš„åˆ›å»º](/Jvm/newObject.md)
+ - [3.1 ç±»åŠ è½½](/Jvm/classLoader.md)
 * **Spring**
  - [4.0 Spring Ioc]
  - [4.1 Spring AOP](/Spring/Spring.md)
  - [4.2 Spring Transaction](/Spring/Transaction.md)
 
-#### µÚ¶ş²¿·Ö Ëã·¨
+#### ç¬¬äºŒéƒ¨åˆ† ç®—æ³•
 * **LeetCode**
  - [5.1 Two Sum](/leetcode/TwoSum.md)
  
-#### µÚÈı²¿·Ö Êı¾İ½á¹¹{²é²¹È±Â©}
-* **Ê±¼ä¸´ÔÓ¶È**
- - [6.0 ÅÅĞò](/dataStruct/Complexity.md)
-* **Õ»Óë¶ÓÁĞ**
- - [7.0 Õ»ÊµÏÖ](/dataStruct/Stack.md)
- - [7.1 Huffman±àÂë](/dataStruct/Huffman.md)
+#### ç¬¬ä¸‰éƒ¨åˆ† æ•°æ®ç»“æ„{æŸ¥è¡¥ç¼ºæ¼}
+* **æ—¶é—´å¤æ‚åº¦**
+ - [6.0 æ’åº](/dataStruct/Complexity.md)
+* **æ ˆä¸é˜Ÿåˆ—**
+ - [7.0 æ ˆå®ç°](/dataStruct/Stack.md)
+ - [7.1 Huffmanç¼–ç ](/dataStruct/Huffman.md)
 
-#### µÚËÄ²¿·Ö Êı¾İ¿â
+#### ç¬¬å››éƒ¨åˆ† æ•°æ®åº“
 * **MySQL**
- - [8.0 ´æ´¢ÒıÇæ](/mysql/mysql.md)
- - [8.1 mysqlÊı¾İÀàĞÍ](/mysql/mysqlDataType.md)
- - [8.2 mysql²éÑ¯´¦Àí](/mysql/search.md)
+ - [8.0 å­˜å‚¨å¼•æ“](/mysql/mysql.md)
+ - [8.1 mysqlæ•°æ®ç±»å‹](/mysql/mysqlDataType.md)
+ - [8.2 mysqlæŸ¥è¯¢å¤„ç†](/mysql/search.md)
  
-#### µÚÎå²¿·Ö Ç°¶Ë
+#### ç¬¬äº”éƒ¨åˆ† å‰ç«¯
 * **jQuery**
- - [9.0 jQueryÓï·¨](/jQuery/jQueryGrammar.md)
- - [9.1 jQueryÊÂ¼ş](/jQuery/jQueryEvent.md)
+ - [9.0 jQueryè¯­æ³•](/jQuery/jQueryGrammar.md)
+ - [9.1 jQueryäº‹ä»¶](/jQuery/jQueryEvent.md)
 
-#### µÚÁù²¿·Ö Linux
-* **Linux »ù´¡**
- - [10.0 LinuxÍøÂçÅäÖÃ](/Linux/networkconfig.md)
+#### ç¬¬å…­éƒ¨åˆ† Linux
+* **Linux åŸºç¡€**
+ - [10.0 Linuxç½‘ç»œé…ç½®](/Linux/networkconfig.md)
